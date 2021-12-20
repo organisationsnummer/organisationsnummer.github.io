@@ -62,20 +62,20 @@ export default class AppDocument extends Document {
           />
           <meta
             name="description"
-            content="Validate swedish personal identity numbers"
+            content="Validate Swedish organization numbers"
           />
-          <meta property="og:title" content="Personnummer" />
+          <meta property="og:title" content="Organisationsnummer" />
           <meta
             property="og:description"
-            content="Validate swedish personal identity numbers"
+            content="Validate Swedish organization numbers"
           />
-          <meta property="og:image" content="https://personnummer.dev/" />
-          <meta name="twitter:title" content="Personnummer" />
+          <meta property="og:image" content="https://organisationsnummer.dev/" />
+          <meta name="twitter:title" content="Organisationsnummer" />
           <meta
             name="twitter:description"
-            content="Validate swedish personal identity numbers"
+            content="Validate Swedish organization numbers."
           />
-          <meta name="twitter:image" content="https://personnummer.dev/" />
+          <meta name="twitter:image" content="https://organisationsnummer.dev/" />
           <meta name="twitter:card" content="summary" />
         </Head>
         <body>

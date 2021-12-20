@@ -6,7 +6,7 @@ const prettier = require('prettier');
 
 (async () => {
   const res = await fetch(
-    'https://raw.githubusercontent.com/personnummer/meta/master/README.md'
+    'https://raw.githubusercontent.com/organisationsnummer/meta/master/README.md'
   );
   const text = await res.text();
   const html = marked

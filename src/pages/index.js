@@ -2,7 +2,6 @@ import React from 'react';
 import Block from '../components/Block';
 import Implementations from '../components/Implementations';
 import Try from '../components/Try';
-import Generate from '../components/Generate';
 
 const languages = require('../data/languages').default.sort((a, b) =>
   a.name.localeCompare(b.name)
@@ -17,20 +16,20 @@ const Index = () => {
     <>
       <Block title="Validate swedish personal identity numbers">
         <p className="pt-3">
-          Personnummer is a{' '}
+          Organisationsnummer is a{' '}
           <a
-            href="https://github.com/personnummer"
+            href="https://github.com/organisationsnummer"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline"
           >
             small open-source project
           </a>{' '}
-          created to validate, format and determine sex and age from swedish
-          personal identity numbers. Support the project by becoming a backer or
+          created to validate and format and age from swedish
+          organization numbers. Support the project by becoming a backer or
           sponsor at{' '}
           <a
-            href="https://opencollective.com/personnummer"
+            href="https://opencollective.com/organisationsnummer"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline"
@@ -66,9 +65,6 @@ const Index = () => {
         <ul className="list-decimal ml-4">
           <li>validation</li>
           <li>formatting</li>
-          <li>determine age</li>
-          <li>determine sex</li>
-          <li>determine if coordination number</li>
         </ul>
         <p className="pt-3">
           All features might not be implemented in all languages. Full
@@ -77,7 +73,7 @@ const Index = () => {
             className="inline-block text-blue-500 cursor-pointer hover:underline"
             rel="noopener noreferrer"
             target="_blank"
-            href="https://github.com/personnummer/meta/blob/master/README.md#package-specification-v3"
+            href="https://github.com/organisationsnummer/meta/blob/master/README.md#package-specification-v1"
           >
             here
           </a>
@@ -86,8 +82,6 @@ const Index = () => {
       </Block>
 
       <Try title="Try" />
-
-      <Generate title="Generate personal identity numbers" />
 
       <Implementations title="Implementations" />
 
@@ -175,7 +169,7 @@ const Index = () => {
         </a>
       </p>
 
-      <Block title="Who is using Personnummer">
+      <Block title="Who is using Organisationsnummer">
         <div className="mt-5">
           {users
             .filter((m) => m.link && m.name && m.image)
@@ -214,7 +208,7 @@ const Index = () => {
 
       <Block title="License" className="mb-20">
         <p>
-          All personnummer packages are released under the{' '}
+          All organisationsnummer packages are released under the{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
