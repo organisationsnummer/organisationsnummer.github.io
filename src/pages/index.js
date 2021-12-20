@@ -14,7 +14,7 @@ const users = require('../data/users').default.sort((a, b) =>
 const Index = () => {
   return (
     <>
-      <Block title="Validate swedish personal identity numbers">
+      <Block title="Validate Swedish organization numbers">
         <p className="pt-3">
           Organisationsnummer is a{' '}
           <a
@@ -25,8 +25,9 @@ const Index = () => {
           >
             small open-source project
           </a>{' '}
-          created to validate and format and age from swedish organization
-          numbers. Support the project by becoming a backer or sponsor at{' '}
+          created to validate, format and getting the type from swedish
+          organization numbers. Support the project by becoming a backer or
+          sponsor at{' '}
           <a
             href="https://opencollective.com/organisationsnummer"
             target="_blank"
