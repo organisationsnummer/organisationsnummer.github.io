@@ -25,9 +25,8 @@ const Index = () => {
           >
             small open-source project
           </a>{' '}
-          created to validate and format and age from swedish
-          organization numbers. Support the project by becoming a backer or
-          sponsor at{' '}
+          created to validate and format and age from swedish organization
+          numbers. Support the project by becoming a backer or sponsor at{' '}
           <a
             href="https://opencollective.com/organisationsnummer"
             target="_blank"
@@ -42,7 +41,7 @@ const Index = () => {
           <span className="text-gray-500 pr-1">available in:</span>
           {languages.map((l, li) => (
             <span key={li}>
-              {li + 1 === languages.length && (
+              {li + 1 === languages.length && languages.length > 1 && (
                 <span className="text-gray-500 pr-1">and for</span>
               )}
               <a

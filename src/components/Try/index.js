@@ -1,16 +1,14 @@
 import { useState } from 'react';
-import personnummer from 'personnummer';
+import organisationsnummer from 'organisationsnummer';
 import Block from '../Block';
 import pkg from '../../../package.json';
 
-const getPersonnummerObj = (pin) => {
+const getOrganisationsnummerObj = (pin) => {
   const output = {
-    age: 'n/a',
+    type: 'n/a',
     long: 'n/a',
-    sex: 'n/a',
     short: 'n/a',
-    con: false,
-    valid: personnummer.valid(pin),
+    valid: false,
   };
 
   if (typeof pin !== 'string') {
@@ -18,32 +16,27 @@ const getPersonnummerObj = (pin) => {
   }
 
   try {
-    const p = personnummer.parse(pin);
+    const p = organisationsnummer.parse(pin);
 
-    if (output.valid) {
-      output.age = p.getAge();
-      output.long = p.format(true);
-      output.short = p.format();
-      output.sex = p.isMale() ? 'male' : 'female';
-      output.con = p.isCoordinationNumber();
-    }
-  } catch (err) {
-    output.sex = 'n/a';
-  }
+    output.type = p.getType();
+    output.long = p.format();
+    output.short = p.format(false);
+    output.valid = true;
+  } catch (err) {}
 
   return output;
 };
 
 const Try = (props) => {
-  const [pin, setPin] = useState('');
-  const pnrObj = getPersonnummerObj(pin);
+  const [org, setOrg] = useState('');
+  const orgObj = getOrganisationsnummerObj(org);
 
   return (
     <Block {...props}>
       <p className="pt-3">input</p>
       <input
         type="text"
-        onChange={(e) => setPin(e.target.value)}
+        onChange={(e) => setOrg(e.target.value)}
         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
       />
       <p className="pt-3">result</p>
@@ -53,29 +46,25 @@ const Try = (props) => {
             <td className="border px-4 py-2">valid</td>
             <td
               className={`border px-4 py-2 ${
-                pnrObj.valid ? 'text-green-500' : 'text-red-500'
+                orgObj.valid ? 'text-green-500' : 'text-red-500'
               }`}
             >
-              {pnrObj.valid ? 'yes' : 'no'}
+              {orgObj.valid ? 'yes' : 'no'}
             </td>
           </tr>
           <tr>
             <td className="border px-4 py-2">short format</td>
-            <td className="border px-4 py-2">{pnrObj.short}</td>
+            <td className="border px-4 py-2">{orgObj.short}</td>
           </tr>
           <tr>
             <td className="border px-4 py-2">long format</td>
-            <td className="border px-4 py-2">{pnrObj.long}</td>
+            <td className="border px-4 py-2">{orgObj.long}</td>
           </tr>
           <tr>
-            <td className="border px-4 py-2">age</td>
-            <td className="border px-4 py-2">{pnrObj.age}</td>
+            <td className="border px-4 py-2">type</td>
+            <td className="border px-4 py-2">{orgObj.type}</td>
           </tr>
-          <tr>
-            <td className="border px-4 py-2">sex</td>
-            <td className="border px-4 py-2">{pnrObj.sex}</td>
-          </tr>
-          <tr>
+          {/* <tr>
             <td className="border px-4 py-2">coordination number</td>
             <td
               className={`border px-4 py-2 ${
@@ -84,12 +73,12 @@ const Try = (props) => {
             >
               {pnrObj.con ? 'yes' : 'no'}
             </td>
-          </tr>
+          </tr> */}
         </tbody>
       </table>
       <p className="mt-3 italic">
         using javascript version{' '}
-        {pkg.devDependencies.personnummer.replace('^', '')}
+        {pkg.devDependencies.organisationsnummer.replace('^', '')}
       </p>
     </Block>
   );
