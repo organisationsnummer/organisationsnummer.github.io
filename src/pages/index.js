@@ -65,6 +65,7 @@ const Index = () => {
         <ul className="list-decimal ml-4">
           <li>validation</li>
           <li>formatting</li>
+          <li>get type</li>
         </ul>
         <p className="pt-3">
           All features might not be implemented in all languages. Full

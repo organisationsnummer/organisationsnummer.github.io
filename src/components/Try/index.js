@@ -18,7 +18,7 @@ const getOrganisationsnummerObj = (pin) => {
   try {
     const p = organisationsnummer.parse(pin);
 
-    output.type = p.getType();
+    output.type = p.type();
     output.long = p.format();
     output.short = p.format(false);
     output.valid = true;
