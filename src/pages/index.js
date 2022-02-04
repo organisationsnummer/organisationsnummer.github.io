@@ -29,7 +29,7 @@ const Index = () => {
           organization numbers. Support the project by becoming a backer or
           sponsor at{' '}
           <a
-            href="https://opencollective.com/organisationsnummer"
+            href="https://opencollective.com/personnummer"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline"
