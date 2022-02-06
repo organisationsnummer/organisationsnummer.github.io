@@ -1,14 +1,21 @@
 import { useState } from 'react';
 import organisationsnummer from 'organisationsnummer';
-import Block from '../Block';
+import Block, { BlockProps } from '../Block';
 import pkg from '../../../package.json';
 
-const getOrganisationsnummerObj = (pin) => {
+type Output = {
+  type: string;
+  long: string;
+  short: string;
+  valid: boolean;
+};
+
+const getOrganisationsnummerObj = (pin: string): Output => {
   const output = {
     type: 'n/a',
     long: 'n/a',
     short: 'n/a',
-    valid: false,
+    valid: false
   };
 
   if (typeof pin !== 'string') {
@@ -27,7 +34,7 @@ const getOrganisationsnummerObj = (pin) => {
   return output;
 };
 
-const Try = (props) => {
+const Try = (props: BlockProps) => {
   const [org, setOrg] = useState('');
   const orgObj = getOrganisationsnummerObj(org);
 
@@ -64,16 +71,6 @@ const Try = (props) => {
             <td className="border px-4 py-2">type</td>
             <td className="border px-4 py-2">{orgObj.type}</td>
           </tr>
-          {/* <tr>
-            <td className="border px-4 py-2">coordination number</td>
-            <td
-              className={`border px-4 py-2 ${
-                pnrObj.con ? 'text-green-500' : 'text-red-500'
-              }`}
-            >
-              {pnrObj.con ? 'yes' : 'no'}
-            </td>
-          </tr> */}
         </tbody>
       </table>
       <p className="mt-3 italic">

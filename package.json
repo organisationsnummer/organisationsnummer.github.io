@@ -7,6 +7,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^17.0.15",
+    "@types/react": "^17.0.39",
     "autoprefixer": "10.4.2",
     "eslint-config-next": "12.0.10",
     "marked": "4.0.12",
@@ -18,6 +20,7 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "tailwindcss": "3.0.18",
+    "typescript": "^4.5.5",
     "undici": "^4.13.0"
   },
   "scripts": {
@@ -25,8 +28,8 @@
     "build": "next build",
     "start": "next start",
     "export": "next export",
-    "lint": "lint",
-    "format": "prettier --single-quote --write 'src/**/*.js' && semistandard --fix",
+    "lint": "next lint && tsc",
+    "format": "prettier --single-quote --write 'src/**/*.ts*'",
     "update": "node scripts/implementations.js"
   }
 }
