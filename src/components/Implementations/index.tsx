@@ -40,9 +40,9 @@ const Implementations = (props: BlockProps) => (
               <a
                 className="text-blue-500 hover:underline"
                 rel="noopener noreferrer"
-                href="https://github.com/personnummer/meta/#package-specification-v1"
+                href="https://github.com/personnummer/meta/#package-specification-v11"
               >
-                1.0
+                1.1
               </a>
             </td>
             <td className="border px-4 py-2">

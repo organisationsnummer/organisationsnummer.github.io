@@ -22,7 +22,7 @@ const Index = () => (
         >
           small open-source project
         </a>{' '}
-        created to validate, format and getting the type from swedish
+        created to validate, format and getting the organization type from swedish
         organization numbers. Support the project by becoming a backer or
         sponsor at{' '}
         <a
@@ -62,7 +62,8 @@ const Index = () => (
       <ul className="list-decimal ml-4">
         <li>validation</li>
         <li>formatting</li>
-        <li>get type</li>
+        <li>organization type</li>
+        <li>vat number</li>
       </ul>
       <p className="pt-3">
         All features might not be implemented in all languages. Full

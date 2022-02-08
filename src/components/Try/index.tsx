@@ -7,6 +7,7 @@ type Output = {
   type: string;
   long: string;
   short: string;
+  vat: string;
   valid: boolean;
 };
 
@@ -15,6 +16,7 @@ const getOrganisationsnummerObj = (pin: string): Output => {
     type: 'n/a',
     long: 'n/a',
     short: 'n/a',
+    vat: 'n/a',
     valid: false
   };
 
@@ -28,6 +30,7 @@ const getOrganisationsnummerObj = (pin: string): Output => {
     output.type = p.type();
     output.long = p.format();
     output.short = p.format(false);
+    output.vat = p.vatNumber();
     output.valid = true;
   } catch (err) {}
 
@@ -70,6 +73,10 @@ const Try = (props: BlockProps) => {
           <tr>
             <td className="border px-4 py-2">type</td>
             <td className="border px-4 py-2">{orgObj.type}</td>
+          </tr>
+          <tr>
+            <td className="border px-4 py-2">vat number</td>
+            <td className="border px-4 py-2">{orgObj.vat}</td>
           </tr>
         </tbody>
       </table>
