@@ -22,9 +22,9 @@ const Index = () => (
         >
           small open-source project
         </a>{' '}
-        created to validate, format and getting the organization type from swedish
-        organization numbers. Support the project by becoming a backer or
-        sponsor at{' '}
+        created to validate, format and getting the organization type from
+        swedish organization numbers. Support the project by becoming a backer
+        or sponsor at{' '}
         <a
           href="https://opencollective.com/personnummer"
           target="_blank"
