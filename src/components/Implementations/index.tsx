@@ -224,6 +224,59 @@ const Implementations = (props: BlockProps) => (
               >
                 @Johannestegner
               </a>
+            </td>            
+          </tr>
+          <tr>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/organisationsnummer/php"
+              >
+                PHP
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/organisationsnummer/php"
+              >
+                <img
+                  src="https://img.shields.io/github/v/release/organisationsnummer/php?style=flat-square"
+                  alt="GitHub release (latest by date)"
+                />
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/personnummer/meta/#package-specification-v11"
+              >
+                1.1
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/personnummer/php/actions"
+              >
+                <img
+                  src="https://img.shields.io/github/workflow/status/organisationsnummer/php/PHP%20Composer?style=flat-square"
+                  alt="GitHub Workflow Status"
+                />
+              </a>
+            </td>
+            <td className="border px-4 py-2">
+              <a
+                className="text-blue-500 hover:underline"
+                rel="noopener noreferrer"
+                href="https://github.com/Johannestegner"
+              >
+                @Johannestegner
+              </a>
             </td>
           </tr>
         </tbody>
