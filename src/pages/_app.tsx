@@ -37,15 +37,15 @@ const App = ({ Component, pageProps }: AppProps) => (
         >
           GitHub
         </a>{' '}
-        {/* -{' '}
+        -{' '}
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://twitter.com/personnummerdev"
+              href="https://twitter.com/sweidproject"
               className="text-blue-500 hover:underline"
             >
               Twitter
-            </a> */}
+            </a>
       </p>
     </div>
   </>
