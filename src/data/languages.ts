@@ -20,6 +20,10 @@ const languages: Languages = [
     link: 'https://github.com/organisationsnummer/go'
   },
   {
+    name: 'Java',
+    link: 'https://github.com/organisationsnummer/java'
+  },
+  {
     name: 'JavaScript',
     link: 'https://github.com/organisationsnummer/js'
   },
