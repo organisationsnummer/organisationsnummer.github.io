@@ -13,7 +13,7 @@
     "eslint-config-next": "12.2.5",
     "marked": "4.0.19",
     "next": "12.2.5",
-    "organisationsnummer": "1.1.0",
+    "organisationsnummer": "^1.1.1",
     "postcss": "8.4.16",
     "prettier": "2.7.1",
     "react": "18.2.0",
