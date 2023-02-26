@@ -30,6 +30,10 @@ const languages: Languages = [
   {
     name: 'PHP',
     link: 'https://github.com/organisationsnummer/php'
+  },
+  {
+    name: 'Rust',
+    link: 'https://github.com/organisationsnummer/rust'
   }
 ];
 
