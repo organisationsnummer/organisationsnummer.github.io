@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - develop
-  pull_request:
 
 jobs:
   build:
@@ -18,11 +17,11 @@ jobs:
       - name: Install and build.
         run: |
           npm ci
-          node scripts/implementations.js
           npm run build
           npm run export
         env:
           CI: true
+          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
       - name: Deploy!
         uses: demurgos/ga-deploy-git@v1
         if: ${{ github.event_name == 'push' }}
