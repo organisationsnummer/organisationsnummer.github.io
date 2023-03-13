@@ -4,7 +4,6 @@ import { Octokit } from '@octokit/rest';
 import Block from '../components/Block';
 import Implementations from '../components/Implementations';
 import Try from '../components/Try';
-import languagesData from '../data/languages';
 import usersData from '../data/users';
 
 const users = usersData.sort((a, b) => a.name.localeCompare(b.name));
