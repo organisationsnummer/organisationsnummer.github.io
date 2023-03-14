@@ -1,10 +1,12 @@
-name: "Install and build"
+name: "Deploy"
 
 on:
   push:
     branches:
       - develop
-  pull_request:
+
+  schedule:
+    - cron: "0 9-23 * * *"
 
 jobs:
   build:
@@ -14,15 +16,16 @@ jobs:
       - name: Set up node.
         uses: actions/setup-node@v2.5.0
         with:
-          node-version: 16.x
-      - name: Install and build.
+          node-version: 18.x
+      - name: Install
+        run: npm ci
+      - name: Build and export
         run: |
-          npm ci
-          node scripts/implementations.js
           npm run build
           npm run export
         env:
           CI: true
+          GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
       - name: Deploy!
         uses: demurgos/ga-deploy-git@v1
         if: ${{ github.event_name == 'push' }}
