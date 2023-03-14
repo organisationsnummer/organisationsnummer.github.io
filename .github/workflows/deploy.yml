@@ -1,9 +1,12 @@
-name: "Install and build"
+name: "Deploy"
 
 on:
   push:
     branches:
       - develop
+
+  schedule:
+    - cron: "0 9-23 * * *"
 
 jobs:
   build:
@@ -14,9 +17,10 @@ jobs:
         uses: actions/setup-node@v2.5.0
         with:
           node-version: 16.x
-      - name: Install and build.
+      - name: Install
+        run: npm ci
+      - name: Build and export
         run: |
-          npm ci
           npm run build
           npm run export
         env:
