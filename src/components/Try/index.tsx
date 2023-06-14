@@ -48,6 +48,7 @@ const Try = (props: BlockProps) => {
         type="text"
         onChange={(e) => setOrg(e.target.value)}
         className="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+        placeholder="AABBCC-XXXX"
       />
       <p className="pt-3">result</p>
       <table className="table-fixed w-full">
