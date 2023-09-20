@@ -10,7 +10,7 @@
     "@octokit/rest": "^19.0.11",
     "@types/node": "20.6.3",
     "@types/react": "18.2.22",
-    "autoprefixer": "10.4.15",
+    "autoprefixer": "10.4.16",
     "eslint-config-next": "13.5.2",
     "next": "13.5.2",
     "organisationsnummer": "^1.1.5",
