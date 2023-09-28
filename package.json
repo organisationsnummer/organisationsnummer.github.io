@@ -14,7 +14,7 @@
     "eslint-config-next": "13.5.3",
     "next": "13.5.3",
     "organisationsnummer": "^1.1.5",
-    "postcss": "8.4.30",
+    "postcss": "8.4.31",
     "prettier": "2.8.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
