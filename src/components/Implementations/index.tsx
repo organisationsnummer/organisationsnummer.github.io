@@ -45,7 +45,7 @@ const Implementations = (props: ImplementationsProps) => (
                   href={pkg.repo}
                 >
                   <img
-                    src={`https://img.shields.io/github/v/release/personnummer/${pkg.repo
+                    src={`https://img.shields.io/github/v/release/organisationsnummer/${pkg.repo
                       .split('/')
                       .pop()}?style=flat-square`}
                     alt="GitHub release (latest by date)"
@@ -56,7 +56,7 @@ const Implementations = (props: ImplementationsProps) => (
                 <a
                   className="text-blue-500 hover:underline"
                   rel="noopener noreferrer"
-                  href={`https://github.com/personnummer/meta/#package-specification-v${pkg.spec
+                  href={`https://github.com/organisationsnummer/meta/#package-specification-v${pkg.spec
                     .replace(/(\d).0/, '$1')
                     .replace('.', '')}`}
                 >
