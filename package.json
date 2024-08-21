@@ -7,7 +7,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@octokit/rest": "^20.0.2",
+    "@octokit/rest": "^21.0.0",
     "@types/node": "20.16.1",
     "@types/react": "18.3.4",
     "autoprefixer": "10.4.20",
