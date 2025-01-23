@@ -84,7 +84,7 @@ const Index = ({ pkgs = [] }) => (
 
     <p className="pt-3">
       Some implementations may be a{' '}
-      <span className="rounded bg-gray-300 px-1">work in progress</span> if you
+      <span className="rounded-sm bg-gray-300 px-1">work in progress</span> if you
       find a bug, please open an issue in the specific implementation
       repository.
     </p>

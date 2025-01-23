@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import type { AppProps } from 'next/app';
-import 'tailwindcss/tailwind.css';
 import '../styles/main.css';
 
 const App = ({ Component, pageProps }: AppProps) => (
@@ -38,14 +37,14 @@ const App = ({ Component, pageProps }: AppProps) => (
           GitHub
         </a>{' '}
         -{' '}
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://twitter.com/sweidproject"
-              className="text-blue-500 hover:underline"
-            >
-              Twitter
-            </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://twitter.com/sweidproject"
+          className="text-blue-500 hover:underline"
+        >
+          Twitter
+        </a>
       </p>
     </div>
   </>
