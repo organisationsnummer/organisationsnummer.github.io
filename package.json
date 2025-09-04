@@ -9,7 +9,7 @@
   "devDependencies": {
     "@octokit/rest": "22.0.0",
     "@tailwindcss/postcss": "^4.1.10",
-    "@types/node": "22.18.0",
+    "@types/node": "22.18.1",
     "@types/react": "19.1.12",
     "eslint-config-next": "15.5.2",
     "next": "15.5.2",
