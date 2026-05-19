@@ -10,7 +10,7 @@
     "@octokit/rest": "22.0.1",
     "@tailwindcss/postcss": "^4.1.10",
     "@types/node": "22.19.19",
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.15",
     "eslint": "^9.38.0",
     "eslint-config-next": "16.2.6",
     "next": "16.2.6",
@@ -31,6 +31,6 @@
     "format": "prettier --single-quote --write 'src/**/*.ts*'"
   },
   "overrides": {
-    "@types/react": "19.2.14"
+    "@types/react": "19.2.15"
   }
 }
