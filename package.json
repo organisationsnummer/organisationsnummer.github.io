@@ -16,7 +16,7 @@
     "next": "16.2.9",
     "organisationsnummer": "1.2.0",
     "postcss": "8.5.15",
-    "prettier": "3.8.5",
+    "prettier": "3.9.0",
     "react": "19.2.7",
     "react-dom": "19.2.7",
     "tailwindcss": "^4.1.10",
