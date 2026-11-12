@@ -8,5 +8,5 @@ Website for Organisationsnummer project and we have a "who is using this"-sectio
 
 ## In memoriam
 
-Fredrik "Frozzare" Forsmo (1991-2026) co-founded this project and helped shaped its core. 
+Fredrik "Frozzare" Forsmo (1991-2026) co-founded this project and helped shape its core. 
 This site, and every library behind it, carries his work. He is missed.

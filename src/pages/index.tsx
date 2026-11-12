@@ -222,19 +222,24 @@ export async function getStaticProps() {
     auth: process.env.GITHUB_TOKEN
   });
 
-  const repos = await octokit.rest.repos.listForOrg({
-    org: 'organisationsnummer',
-    type: 'public'
-  });
+  const repos = {
+    data: await octokit.paginate(octokit.rest.repos.listForOrg, {
+      org: 'organisationsnummer',
+      type: 'public',
+      per_page: 100
+    })
+  };
 
   const files = await Promise.allSettled(
-    repos.data.map(async (repo) =>
-      octokit.rest.repos.getContent({
-        owner: 'organisationsnummer',
-        repo: repo.name,
-        path: '.meta.yaml'
-      })
-    )
+    repos.data
+      .filter((repo) => !repo.archived)
+      .map(async (repo) =>
+        octokit.rest.repos.getContent({
+          owner: 'organisationsnummer',
+          repo: repo.name,
+          path: '.meta.yaml'
+        })
+      )
   );
 
   const pkgs = files
