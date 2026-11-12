@@ -46,6 +46,11 @@ const App = ({ Component, pageProps }: AppProps) => (
           Twitter
         </a>
       </p>
+      <p className="text-center text-gray-600 mt-2">
+        Fredrik &quot;Frozzare&quot; Forsmo (1991-2026) co-founded this project
+        and helped shaped its core. This site, and every library behind
+        it, carries his work. He is missed.
+      </p>
     </div>
   </>
 );
