@@ -70,7 +70,7 @@ const Index = ({ pkgs = [] }) => (
           className="inline-block text-blue-500 cursor-pointer hover:underline"
           rel="noopener noreferrer"
           target="_blank"
-          href="https://github.com/organisationsnummer/meta/blob/master/README.md#package-specification-v1"
+          href="https://github.com/organisationsnummer/meta/blob/main/README.md#package-specification-v1"
         >
           here
         </a>
@@ -188,7 +188,7 @@ const Index = ({ pkgs = [] }) => (
         <p>
           Add your logo{' '}
           <a
-            href="https://github.com/organisationsnummer/organisationsnummer.github.io/blob/develop/src/data/users.ts"
+            href="https://github.com/organisationsnummer/organisationsnummer.github.io/blob/main/src/data/users.ts"
             target="_blank"
             rel="noopener noreferrer"
             className="text-blue-500 hover:underline"
