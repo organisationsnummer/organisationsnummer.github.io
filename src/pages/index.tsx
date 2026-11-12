@@ -228,13 +228,15 @@ export async function getStaticProps() {
   });
 
   const files = await Promise.allSettled(
-    repos.data.map(async (repo) =>
-      octokit.rest.repos.getContent({
-        owner: 'organisationsnummer',
-        repo: repo.name,
-        path: '.meta.yaml'
-      })
-    )
+    repos.data
+      .filter((repo) => !repo.archived)
+      .map(async (repo) =>
+        octokit.rest.repos.getContent({
+          owner: 'organisationsnummer',
+          repo: repo.name,
+          path: '.meta.yaml'
+        })
+      )
   );
 
   const pkgs = files
