@@ -12,13 +12,13 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7.0.1
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - name: Setup node
-        uses: actions/setup-node@v7.1.0
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version-file: .nvmrc
       - name: Setup cache
-        uses: actions/cache@v6
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6
         with:
           path: |
             ~/.npm
@@ -37,7 +37,7 @@ jobs:
           CI: true
           GITHUB_TOKEN: ${{ secrets.PUSH_TOKEN }}
       - name: Deploy!
-        uses: demurgos/ga-deploy-git@v1
+        uses: demurgos/ga-deploy-git@07cc08e84b97a3181f1933dcfc341b7918e81a6c # v1
         if: ${{ github.event_name == 'push' }}
         with:
           accessToken: ${{ secrets.PUSH_TOKEN }}
