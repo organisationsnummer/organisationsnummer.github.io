@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import organisationsnummer from 'organisationsnummer';
-import Block, { BlockProps } from '../Block';
-import pkg from '../../../package.json';
+import Block from '../Block';
+import type { BlockProps } from '../Block';
+import { version } from 'organisationsnummer/package.json';
 
 type Output = {
   type: string;
@@ -32,7 +33,9 @@ const getOrganisationsnummerObj = (pin: string): Output => {
     output.short = p.format(false);
     output.vat = p.vatNumber();
     output.valid = true;
-  } catch (err) {}
+  } catch {
+    // Invalid input: keep the n/a defaults.
+  }
 
   return output;
 };
@@ -81,10 +84,7 @@ const Try = (props: BlockProps) => {
           </tr>
         </tbody>
       </table>
-      <p className="mt-3 italic">
-        using javascript version{' '}
-        {pkg.devDependencies.organisationsnummer.replace('^', '')}
-      </p>
+      <p className="mt-3 italic">using javascript version {version}</p>
     </Block>
   );
 };
