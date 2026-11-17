@@ -14,7 +14,7 @@
     "@types/node": "26.6.6",
     "@types/react": "19.3.0",
     "astro": "7.4.11",
-    "organisationsnummer": "1.2.0",
+    "organisationsnummer": "1.2.1",
     "prettier": "3.10.1",
     "prettier-plugin-astro": "1.1.2",
     "react": "19.3.1",
